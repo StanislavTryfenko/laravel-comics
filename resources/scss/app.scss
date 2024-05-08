@@ -1,1 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron {
+    height: 50vh;
+    background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+}
+
+.h_20rem{
+    height: 20rem;
+}
