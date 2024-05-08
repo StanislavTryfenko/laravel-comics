@@ -9,7 +9,7 @@
                 @foreach ($comics as $comic)
                     <div class="col-2 g-3"> 
                         <div class="card border-0 bg-dark">
-                            <a class="" href="{{ $comic["series"] }}">
+                            <a class="" href="{{ strtolower($comic["series"]) }}">
                                 <img src="{{ $comic["thumb"] }}" class="card-img-top h_20rem" alt="">
                             </a>
                             

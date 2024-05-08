@@ -13,12 +13,12 @@
                         @endphp
                         @foreach ($links as $link)
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ $link }}">{{ strtoupper($link) }}</a>
+                            <a class="nav-link" href="/">{{ strtoupper($link) }}</a>
                         </li>
                         @endforeach
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 SHOP
                             </a>
                             <ul class="dropdown-menu">
