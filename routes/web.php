@@ -23,25 +23,12 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
-//testing failed
-/* $comics = config('comics');
-foreach ($comics as $comic) {
-    Route::get("{$comic['series']}", function () {
-        
 
-        return view('aquaman', compact('comic'));
-    })->name("comic.{$comic['series']}");
-} */
-
-Route::get('/aquaman', function () {
-
-    $comics = config('comics');
-    $comicsCollection = collect($comics);
-    $aquaman = $comicsCollection->filter(fn ($comic) => $comic['series'] == 'Aquaman');
-    $data = [
-        'aquaman' => $aquaman,
-    ];
+route::get('/comics/{id}', function ($id) {
     
-    return view('aquaman', $data);  
-})->name('comic.aquaman');
-
+    $comic = config('comics')[$id];
+   
+    /* @dd($comic); */
+    
+    return view('comic', compact('comic'));
+})->name('comic');
